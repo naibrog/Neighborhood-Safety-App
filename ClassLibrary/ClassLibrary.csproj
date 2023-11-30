@@ -80,6 +80,7 @@
     <Compile Include="CrimeDB.cs" />
     <Compile Include="FirstResponder.cs" />
     <Compile Include="Incident.cs" />
+    <Compile Include="LoginDB.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
