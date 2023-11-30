@@ -34,9 +34,10 @@ namespace Neighborhood_Safety_App
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
+            instance.Hide();
             frmViewCrime viewCrimes = new frmViewCrime();
             viewCrimes.ShowDialog();
-            instance.Hide();
+           
         }
     }
 }
