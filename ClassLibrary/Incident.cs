@@ -13,6 +13,10 @@ namespace ClassLibrary
         public string incidentDetails;
         public User reporter;
         public Incident() { }
+        //fdsfsdfsdfsd
+        //dfsdfs
+        int x = 0;
+        //lkwjerg
         public Incident(DateTime reportTime, FirstResponder responder, string incidentDetails, User reporter)
         {
             this.reportTime = reportTime;
