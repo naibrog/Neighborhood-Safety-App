@@ -16,8 +16,11 @@ namespace ClassLibrary
         //asdf
         //asdf
         //asdf
-
         public Incident() { }
+        //fdsfsdfsdfsd
+        //dfsdfs
+        int x = 0;
+        //lkwjerg
         public Incident(DateTime reportTime, FirstResponder responder, string incidentDetails, User reporter)
         {
             this.reportTime = reportTime;
