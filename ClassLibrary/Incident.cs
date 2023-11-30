@@ -12,6 +12,7 @@ namespace ClassLibrary
         public FirstResponder responder;
         public string incidentDetails;
         public User reporter;
+        //asdf
         public Incident() { }
         public Incident(DateTime reportTime, FirstResponder responder, string incidentDetails, User reporter)
         {
