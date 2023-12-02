@@ -10,8 +10,9 @@ namespace ClassLibrary
 {
     public class CrimeDB
     {
+        string connection = "provider=Microsoft.ACE.OLEDB.12.0; Data Source = SafetyDatabase.accdb;";
         string tableName = "Incident";
-        public DataTable UpdateCrimeTable(string connection)
+        public DataTable UpdateCrimeTable()
         {
             string sqlCommand = $"SELECT * FROM {tableName}";
             OleDbConnection myConnection = new OleDbConnection(connection);

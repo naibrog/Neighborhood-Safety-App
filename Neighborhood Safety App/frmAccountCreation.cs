@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Neighborhood_Safety_App
 {
     public partial class frmAccountCreation : Form
     {
+        LoginDB loginDB = new LoginDB();
         public frmAccountCreation()
         {
             InitializeComponent();
