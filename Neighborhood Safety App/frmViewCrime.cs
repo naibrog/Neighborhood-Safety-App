@@ -13,15 +13,19 @@ namespace Neighborhood_Safety_App
 {
     public partial class frmViewCrime : Form
     {
+        public string ReporterName { get { return lblUser.Text; } set { lblUser.Text = value; } }
+
         public static frmViewCrime instance;
         public CrimeDB viewCrime = new CrimeDB();
         public frmViewCrime()
         {
             instance = this;
             InitializeComponent();
-        }
+           
 
-        private void frmViewCrime_Load(object sender, EventArgs e)
+    }
+
+    private void frmViewCrime_Load(object sender, EventArgs e)
         {
             dgvCrime.DataSource = viewCrime.UpdateCrimeTable();
             dgvCrime.Columns["ID"].Visible = false;
@@ -31,12 +35,16 @@ namespace Neighborhood_Safety_App
         {
             instance.Hide();
             frmAddIncident newIncident = new frmAddIncident();
+            newIncident.ReporterName = ReporterName;
             newIncident.ShowDialog();
         }
 
-        private void dgvCrime_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+      
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            frmLogIn.instance.Visible = true;
+            this.Close();
         }
     }
 }

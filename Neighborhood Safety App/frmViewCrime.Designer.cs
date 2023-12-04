@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewCrime));
             this.pbFileReport = new System.Windows.Forms.PictureBox();
             this.dgvCrime = new System.Windows.Forms.DataGridView();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbFileReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCrime)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +56,26 @@
             this.dgvCrime.RowHeadersWidth = 51;
             this.dgvCrime.Size = new System.Drawing.Size(483, 151);
             this.dgvCrime.TabIndex = 1;
-            this.dgvCrime.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCrime_CellContentClick);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(500, 365);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.Text = "close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Location = new System.Drawing.Point(484, 24);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(35, 13);
+            this.lblUser.TabIndex = 3;
+            this.lblUser.Text = "label1";
+            this.lblUser.Visible = false;
             // 
             // frmViewCrime
             // 
@@ -62,6 +83,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(609, 391);
+            this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvCrime);
             this.Controls.Add(this.pbFileReport);
             this.Name = "frmViewCrime";
@@ -70,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbFileReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCrime)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -77,5 +101,7 @@
 
         private System.Windows.Forms.PictureBox pbFileReport;
         public System.Windows.Forms.DataGridView dgvCrime;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblUser;
     }
 }
