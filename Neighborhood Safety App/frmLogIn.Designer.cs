@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogIn));
             this.btnCreateAccount = new System.Windows.Forms.Button();
-            this.cboUserName = new System.Windows.Forms.ComboBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPw = new System.Windows.Forms.Label();
             this.pbHelp = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnLogIn = new System.Windows.Forms.Button();
             this.dgvLogin = new System.Windows.Forms.DataGridView();
+            this.lblUsernameinstr = new System.Windows.Forms.Label();
+            this.tbUsername = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbHelp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLogin)).BeginInit();
             this.SuspendLayout();
@@ -50,15 +51,6 @@
             this.btnCreateAccount.Text = "Create an Account";
             this.btnCreateAccount.UseVisualStyleBackColor = true;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
-            // 
-            // cboUserName
-            // 
-            this.cboUserName.FormattingEnabled = true;
-            this.cboUserName.Location = new System.Drawing.Point(73, 152);
-            this.cboUserName.Name = "cboUserName";
-            this.cboUserName.Size = new System.Drawing.Size(121, 21);
-            this.cboUserName.TabIndex = 1;
-            this.cboUserName.Text = "Select Username";
             // 
             // txtPassword
             // 
@@ -118,6 +110,22 @@
             this.dgvLogin.TabIndex = 7;
             this.dgvLogin.Visible = false;
             // 
+            // lblUsernameinstr
+            // 
+            this.lblUsernameinstr.AutoSize = true;
+            this.lblUsernameinstr.Location = new System.Drawing.Point(12, 152);
+            this.lblUsernameinstr.Name = "lblUsernameinstr";
+            this.lblUsernameinstr.Size = new System.Drawing.Size(86, 13);
+            this.lblUsernameinstr.TabIndex = 9;
+            this.lblUsernameinstr.Text = "Enter Username:";
+            // 
+            // tbUsername
+            // 
+            this.tbUsername.Location = new System.Drawing.Point(102, 150);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(100, 20);
+            this.tbUsername.TabIndex = 8;
+            // 
             // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -125,13 +133,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(557, 349);
+            this.Controls.Add(this.lblUsernameinstr);
+            this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.dgvLogin);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbHelp);
             this.Controls.Add(this.lblPw);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.cboUserName);
             this.Controls.Add(this.btnCreateAccount);
             this.Name = "frmLogIn";
             this.Text = "LogIn";
@@ -146,13 +155,14 @@
         #endregion
 
         private System.Windows.Forms.Button btnCreateAccount;
-        private System.Windows.Forms.ComboBox cboUserName;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label lblPw;
         private System.Windows.Forms.PictureBox pbHelp;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.DataGridView dgvLogin;
+        private System.Windows.Forms.Label lblUsernameinstr;
+        private System.Windows.Forms.TextBox tbUsername;
     }
 }
 

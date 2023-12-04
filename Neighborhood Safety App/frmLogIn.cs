@@ -20,6 +20,7 @@ namespace Neighborhood_Safety_App
         {
             instance = this;
             InitializeComponent();
+            
         }
        public List<User> userList = new List<User>();
 
@@ -62,10 +63,14 @@ namespace Neighborhood_Safety_App
                 userList.Add(user);
             }
 
-            cboUserName.DataSource = userList;
-            cboUserName.DisplayMember = "UserName";
-            cboUserName.ValueMember = "Phone";
+         //   cboUserName.DataSource = userList;
+        //    cboUserName.DisplayMember = "UserName";
+         //   cboUserName.ValueMember = "Phone";
          
+
+            string userName = tbUsername.Text;
+
+
         }
         private void pbHelp_Click(object sender, EventArgs e)
         {
@@ -81,8 +86,13 @@ namespace Neighborhood_Safety_App
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
+            User user = new User();
+            user.UserName = tbUsername.Text;
+
             instance.Hide();
             frmViewCrime viewCrimes = new frmViewCrime();
+            viewCrimes.ReporterName = user.UserName;
+
             viewCrimes.ShowDialog();
            
         }

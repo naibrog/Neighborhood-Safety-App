@@ -31,11 +31,17 @@ namespace Neighborhood_Safety_App
             else if(radMentalHealth.Checked == true) { firstResponder.Type = "MentalHealth"; }
 
             string responder =  firstResponder.Type;
-            string reporter ;
+            string reporter =   frmViewCrime.instance.ReporterName;
 
            // Incident newIncident = new Incident(DateTime.Now, responder, tbIncidentDetails.Text, reporter);
           //  incidentdb.InsertNewIncident(newIncident);
             frmViewCrime.instance.dgvCrime.DataSource = crimedb.UpdateCrimeTable();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            frmViewCrime.instance.Visible = true;
+            this.Close();
         }
     }
 }
