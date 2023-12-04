@@ -80,6 +80,12 @@
     <Compile Include="frmAccountCreation.Designer.cs">
       <DependentUpon>frmAccountCreation.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddIncident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddIncident.Designer.cs">
+      <DependentUpon>frmAddIncident.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddIncident.resx">
+      <DependentUpon>frmAddIncident.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogIn.resx">
       <DependentUpon>frmLogIn.cs</DependentUpon>
     </EmbeddedResource>

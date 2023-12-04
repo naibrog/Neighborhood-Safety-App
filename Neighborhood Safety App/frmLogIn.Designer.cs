@@ -36,7 +36,9 @@
             this.pbHelp = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnLogIn = new System.Windows.Forms.Button();
+            this.dgvLogin = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pbHelp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogin)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCreateAccount
@@ -107,6 +109,15 @@
             this.btnLogIn.UseVisualStyleBackColor = true;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
+            // dgvLogin
+            // 
+            this.dgvLogin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLogin.Location = new System.Drawing.Point(305, 340);
+            this.dgvLogin.Name = "dgvLogin";
+            this.dgvLogin.Size = new System.Drawing.Size(42, 10);
+            this.dgvLogin.TabIndex = 7;
+            this.dgvLogin.Visible = false;
+            // 
             // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -114,6 +125,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(557, 349);
+            this.Controls.Add(this.dgvLogin);
             this.Controls.Add(this.btnLogIn);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbHelp);
@@ -123,7 +135,9 @@
             this.Controls.Add(this.btnCreateAccount);
             this.Name = "frmLogIn";
             this.Text = "LogIn";
+            this.Load += new System.EventHandler(this.frmLogIn_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbHelp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLogin)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,6 +152,7 @@
         private System.Windows.Forms.PictureBox pbHelp;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnLogIn;
+        private System.Windows.Forms.DataGridView dgvLogin;
     }
 }
 
