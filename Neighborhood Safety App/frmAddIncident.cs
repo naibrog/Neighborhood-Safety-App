@@ -34,8 +34,10 @@ namespace Neighborhood_Safety_App
             string responder =  firstResponder.Type;
             string reporter =   frmViewCrime.instance.ReporterName;
             string pictureURL = tbPicture.Text;
+            string incidentDetails = tbIncidentDetails.Text;
+            string date = DateTime.Now.ToString();
 
-            Incident newIncident = new Incident(DateTime.Now.ToString(), responder, tbIncidentDetails.Text, reporter, pictureURL);
+            Incident newIncident = new Incident(date, responder, incidentDetails, reporter, pictureURL);
             incidentdb.InsertNewIncident(newIncident);
             frmViewCrime.instance.dgvCrime.DataSource = crimedb.UpdateCrimeTable();
          //   List<Incident> newCrimes = new List<Incident>();
