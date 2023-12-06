@@ -15,7 +15,7 @@ namespace ClassLibrary
         public void InsertNewIncident(Incident newIncident)
         {
             string sqlCommand = $"INSERT INTO {tableName} " +
-                 $"(IncidentDate, FirstResponder, IncidentDetails,Reporter) VALUES ('{newIncident.IncidentDate}', '{newIncident.FirstResponder}', '{newIncident.IncidentDetails}', '{newIncident.Reporter} )";
+                 $"(IncidentDate, FirstResponder, IncidentDetails,Reporter, Picture ) VALUES ('{newIncident.IncidentDate}', '{newIncident.FirstResponder}', '{newIncident.IncidentDetails}', '{newIncident.Reporter}', '{newIncident.PictureURL}' )";
             OleDbConnection myConnection = new OleDbConnection(connection);
             OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(sqlCommand, myConnection);
 

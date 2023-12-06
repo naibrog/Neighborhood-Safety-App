@@ -15,6 +15,7 @@ namespace Neighborhood_Safety_App
     {
         IncidentDB incidentdb = new IncidentDB();
         CrimeDB crimedb = new CrimeDB();
+   
 
         public string ReporterName { get { return lblReporterName.Text; } set { lblReporterName.Text = value; } }
         public frmAddIncident()
@@ -32,17 +33,21 @@ namespace Neighborhood_Safety_App
 
             string responder =  firstResponder.Type;
             string reporter =   frmViewCrime.instance.ReporterName;
+            string pictureURL = tbPicture.Text;
 
-            // Incident newIncident = new Incident(DateTime.Now, responder, tbIncidentDetails.Text, reporter);
-            //  incidentdb.InsertNewIncident(newIncident);
-            //  frmViewCrime.instance.dgvCrime.DataSource = crimedb.UpdateCrimeTable();
+            Incident newIncident = new Incident(DateTime.Now.ToString(), responder, tbIncidentDetails.Text, reporter, pictureURL);
+            incidentdb.InsertNewIncident(newIncident);
+            frmViewCrime.instance.dgvCrime.DataSource = crimedb.UpdateCrimeTable();
+         //   List<Incident> newCrimes = new List<Incident>();
+            frmViewCrime.instance.incidentList.Add(newIncident);
+
             frmViewCrime.instance.Refresh();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
             frmViewCrime.instance.Visible = true;
             this.Close();
+
+            
         }
+
+        
     }
 }

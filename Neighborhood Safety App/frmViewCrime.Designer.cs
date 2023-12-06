@@ -33,6 +33,7 @@
             this.dgvCrime = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
+            this.btnViewCrimes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFileReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCrime)).BeginInit();
             this.SuspendLayout();
@@ -41,7 +42,7 @@
             // 
             this.pbFileReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbFileReport.BackgroundImage")));
             this.pbFileReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbFileReport.Location = new System.Drawing.Point(64, 260);
+            this.pbFileReport.Location = new System.Drawing.Point(737, 15);
             this.pbFileReport.Name = "pbFileReport";
             this.pbFileReport.Size = new System.Drawing.Size(100, 50);
             this.pbFileReport.TabIndex = 0;
@@ -77,12 +78,23 @@
             this.lblUser.Text = "label1";
             this.lblUser.Visible = false;
             // 
+            // btnViewCrimes
+            // 
+            this.btnViewCrimes.Location = new System.Drawing.Point(61, 15);
+            this.btnViewCrimes.Name = "btnViewCrimes";
+            this.btnViewCrimes.Size = new System.Drawing.Size(75, 23);
+            this.btnViewCrimes.TabIndex = 4;
+            this.btnViewCrimes.Text = "View Crimes";
+            this.btnViewCrimes.UseVisualStyleBackColor = true;
+            this.btnViewCrimes.Click += new System.EventHandler(this.btnViewCrimes_Click);
+            // 
             // frmViewCrime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(609, 391);
+            this.ClientSize = new System.Drawing.Size(1068, 391);
+            this.Controls.Add(this.btnViewCrimes);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvCrime);
@@ -103,5 +115,6 @@
         public System.Windows.Forms.DataGridView dgvCrime;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Button btnViewCrimes;
     }
 }

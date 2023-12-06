@@ -18,7 +18,7 @@ namespace ClassLibrary
 
 
         public Incident() { }
-        public Incident(string reportTime, string responder, string incidentDetails, string reporter)
+        public Incident(string reportTime, string responder, string incidentDetails, string reporter, string pictureURL)
         {
             this.reportTime = reportTime;
             this.responder = responder;

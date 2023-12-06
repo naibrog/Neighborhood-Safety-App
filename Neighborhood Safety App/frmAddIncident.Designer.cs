@@ -37,7 +37,7 @@
             this.radAmbulance = new System.Windows.Forms.RadioButton();
             this.radPolice = new System.Windows.Forms.RadioButton();
             this.lblReporterName = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.tbPicture = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbReportButton)).BeginInit();
             this.gbType.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +55,7 @@
             // 
             this.pbReportButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbReportButton.BackgroundImage")));
             this.pbReportButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbReportButton.Location = new System.Drawing.Point(184, 188);
+            this.pbReportButton.Location = new System.Drawing.Point(182, 235);
             this.pbReportButton.Name = "pbReportButton";
             this.pbReportButton.Size = new System.Drawing.Size(109, 103);
             this.pbReportButton.TabIndex = 2;
@@ -80,7 +80,7 @@
             this.radMentalHealth.AutoSize = true;
             this.radMentalHealth.Location = new System.Drawing.Point(7, 92);
             this.radMentalHealth.Name = "radMentalHealth";
-            this.radMentalHealth.Size = new System.Drawing.Size(135, 17);
+            this.radMentalHealth.Size = new System.Drawing.Size(148, 26);
             this.radMentalHealth.TabIndex = 3;
             this.radMentalHealth.TabStop = true;
             this.radMentalHealth.Text = "Mental Health Services";
@@ -91,7 +91,7 @@
             this.radFireDept.AutoSize = true;
             this.radFireDept.Location = new System.Drawing.Point(7, 68);
             this.radFireDept.Name = "radFireDept";
-            this.radFireDept.Size = new System.Drawing.Size(100, 17);
+            this.radFireDept.Size = new System.Drawing.Size(113, 26);
             this.radFireDept.TabIndex = 2;
             this.radFireDept.TabStop = true;
             this.radFireDept.Text = "Fire Department";
@@ -102,7 +102,7 @@
             this.radAmbulance.AutoSize = true;
             this.radAmbulance.Location = new System.Drawing.Point(7, 44);
             this.radAmbulance.Name = "radAmbulance";
-            this.radAmbulance.Size = new System.Drawing.Size(78, 17);
+            this.radAmbulance.Size = new System.Drawing.Size(91, 26);
             this.radAmbulance.TabIndex = 1;
             this.radAmbulance.TabStop = true;
             this.radAmbulance.Text = "Ambulance";
@@ -113,7 +113,7 @@
             this.radPolice.AutoSize = true;
             this.radPolice.Location = new System.Drawing.Point(7, 20);
             this.radPolice.Name = "radPolice";
-            this.radPolice.Size = new System.Drawing.Size(54, 17);
+            this.radPolice.Size = new System.Drawing.Size(67, 26);
             this.radPolice.TabIndex = 0;
             this.radPolice.TabStop = true;
             this.radPolice.Text = "Police";
@@ -128,15 +128,14 @@
             this.lblReporterName.TabIndex = 4;
             this.lblReporterName.Text = "report name";
             // 
-            // btnClose
+            // tbPicture
             // 
-            this.btnClose.Location = new System.Drawing.Point(401, 280);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 5;
-            this.btnClose.Text = "close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.tbPicture.Location = new System.Drawing.Point(151, 190);
+            this.tbPicture.Margin = new System.Windows.Forms.Padding(2);
+            this.tbPicture.Name = "tbPicture";
+            this.tbPicture.Size = new System.Drawing.Size(170, 20);
+            this.tbPicture.TabIndex = 6;
+            this.tbPicture.Text = "Add picture url";
             // 
             // frmAddIncident
             // 
@@ -144,8 +143,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(470, 318);
-            this.Controls.Add(this.btnClose);
+            this.ClientSize = new System.Drawing.Size(470, 372);
+            this.Controls.Add(this.tbPicture);
             this.Controls.Add(this.lblReporterName);
             this.Controls.Add(this.gbType);
             this.Controls.Add(this.pbReportButton);
@@ -170,6 +169,6 @@
         private System.Windows.Forms.RadioButton radAmbulance;
         private System.Windows.Forms.RadioButton radPolice;
         private System.Windows.Forms.Label lblReporterName;
-        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.TextBox tbPicture;
     }
 }
