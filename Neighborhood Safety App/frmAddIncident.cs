@@ -41,6 +41,8 @@ namespace Neighborhood_Safety_App
          //   List<Incident> newCrimes = new List<Incident>();
             frmViewCrime.instance.incidentList.Add(newIncident);
 
+
+            //how to update the form????
             frmViewCrime.instance.Refresh();
             frmViewCrime.instance.Visible = true;
             this.Close();
