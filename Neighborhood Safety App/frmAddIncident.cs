@@ -33,9 +33,10 @@ namespace Neighborhood_Safety_App
             string responder =  firstResponder.Type;
             string reporter =   frmViewCrime.instance.ReporterName;
 
-           // Incident newIncident = new Incident(DateTime.Now, responder, tbIncidentDetails.Text, reporter);
-          //  incidentdb.InsertNewIncident(newIncident);
-            frmViewCrime.instance.dgvCrime.DataSource = crimedb.UpdateCrimeTable();
+            // Incident newIncident = new Incident(DateTime.Now, responder, tbIncidentDetails.Text, reporter);
+            //  incidentdb.InsertNewIncident(newIncident);
+            //  frmViewCrime.instance.dgvCrime.DataSource = crimedb.UpdateCrimeTable();
+            frmViewCrime.instance.Refresh();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
