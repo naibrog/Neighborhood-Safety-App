@@ -46,8 +46,9 @@ namespace Neighborhood_Safety_App
 
             //how to update the form????
             frmViewCrime.instance.Refresh();
-           // frmViewCrime.instance.Visible = true;
+            // frmViewCrime.instance.Visible = true;
 
+            this.Hide();
             frmViewCrime newCrimeForm = new frmViewCrime();
             newCrimeForm.ShowDialog();
            
