@@ -15,6 +15,7 @@ namespace Neighborhood_Safety_App
     {
         IncidentDB incidentdb = new IncidentDB();
         CrimeDB crimedb = new CrimeDB();
+   
 
         public string ReporterName { get { return lblReporterName.Text; } set { lblReporterName.Text = value; } }
         public frmAddIncident()
@@ -32,16 +33,30 @@ namespace Neighborhood_Safety_App
 
             string responder =  firstResponder.Type;
             string reporter =   frmViewCrime.instance.ReporterName;
+            string pictureURL = tbPicture.Text;
+            string incidentDetails = tbIncidentDetails.Text;
+            string date = DateTime.Now.ToString();
 
-           // Incident newIncident = new Incident(DateTime.Now, responder, tbIncidentDetails.Text, reporter);
-          //  incidentdb.InsertNewIncident(newIncident);
+            Incident newIncident = new Incident(date, responder, incidentDetails, reporter, pictureURL);
+            incidentdb.InsertNewIncident(newIncident);
             frmViewCrime.instance.dgvCrime.DataSource = crimedb.UpdateCrimeTable();
+         //   List<Incident> newCrimes = new List<Incident>();
+            frmViewCrime.instance.incidentList.Add(newIncident);
+
+
+            //how to update the form????
+            frmViewCrime.instance.Refresh();
+            // frmViewCrime.instance.Visible = true;
+
+            this.Hide();
+            frmViewCrime newCrimeForm = new frmViewCrime();
+            newCrimeForm.ShowDialog();
+           
+            this.Close();
+
+            
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            frmViewCrime.instance.Visible = true;
-            this.Close();
-        }
+        
     }
 }
