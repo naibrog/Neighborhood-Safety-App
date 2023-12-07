@@ -24,6 +24,7 @@ namespace ClassLibrary
             this.responder = responder;
             this.incidentDetails = incidentDetails;
             this.reporter = reporter;
+            this.pictureURL = pictureURL;
 
         }
         public string IncidentDate { get { return this.reportTime; } set { reportTime = value; } }
