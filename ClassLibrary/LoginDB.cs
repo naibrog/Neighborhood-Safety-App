@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ClassLibrary
 {
@@ -69,6 +70,24 @@ namespace ClassLibrary
 
             DataTable crimeTable = crimeDataSet.Tables[tableName];
             return crimeTable;
+        }
+
+        public bool IfAccountExists( string username, string password)
+        {
+            string strCommand = $"SELECT COUNT(*) FROM  {tableName} WHERE UserName = '" + username + " '" +
+                 "AND Password = '" + password + "'";
+
+            OleDbConnection myConnection = new OleDbConnection(connection);
+            OleDbDataAdapter myDataAdapter = new OleDbDataAdapter(strCommand, myConnection);
+
+            DataSet crimeDataSet = new DataSet(tableName);
+
+            myDataAdapter.Fill(crimeDataSet, tableName);
+
+            DataTable crimeTable = crimeDataSet.Tables[tableName];
+
+
+            return true;
         }
     }
 }

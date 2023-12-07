@@ -16,6 +16,7 @@ namespace Neighborhood_Safety_App
     public partial class frmLogIn : Form
     {
         public static frmLogIn instance;
+        LoginDB loginDB = new LoginDB();
         public frmLogIn()
         {
             instance = this;
@@ -26,7 +27,7 @@ namespace Neighborhood_Safety_App
 
         private void frmLogIn_Load(object sender, EventArgs e)
         {
-            LoginDB loginDB = new LoginDB();
+            
             /*  string connection = "provider=Microsoft.ACE.OLEDB.12.0; Data Source = SafetyDatabase.accdb;";
               string tableName = "UserLogIn";
 
@@ -86,15 +87,22 @@ namespace Neighborhood_Safety_App
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            User user = new User();
-            user.UserName = tbUsername.Text;
+            if (loginDB.IfAccountExists(tbUsername.Text, txtPassword.Text))
+            {
+                User user = new User();
+                user.UserName = tbUsername.Text;
 
-            instance.Hide();
-            frmViewCrime viewCrimes = new frmViewCrime();
-            viewCrimes.ReporterName = user.UserName;
+                instance.Hide();
+                frmViewCrime viewCrimes = new frmViewCrime();
+                viewCrimes.ReporterName = user.UserName;
 
-            viewCrimes.ShowDialog();
-           
+                viewCrimes.ShowDialog();
+            }
+            else
+            {
+                string message = "username/password is  incorrect";
+                MessageBox.Show(message);
+            }
         }
 
         
